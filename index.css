@@ -639,28 +639,63 @@ header.active .right__sec{
 
 
 
-.hero__section{
-  width: 100%;height: 600PX;
-  background-color: red;
-  border-radius: 0PX 0PX 10PX 10PX;
+
+footer{
+  width: 100%;height: auto;
+  padding: 1REM 5%;
+  background-color: #191919;
   position: relative;
+  overflow: hidden;
 }
-.hero__section .section__image{
-  width: 100%;height: 100%;
+footer::before{
+  content: '';position: absolute;
+  width: 200PX;height: 200PX;
+  background-color: #3B3B3B;
+  border-radius: 50%;
+  filter: blur(100PX);
+  left: 0%;
 }
-.hero__section .section__image img{
-  width: 100%;height: 100%;
-  object-fit: cover;
-  object-position: center;
+footer::after{
+  content: '';position: absolute;
+  width: 200PX;height: 200PX;
+  background-color: #3B3B3B;
+  border-radius: 50%;
+  filter: blur(100PX);
+  right: 0%;
+}
+@media screen and (max-width:996PX) {
+  footer{
+    padding: 1REM 2%;
+  }
+}
+footer .container{
+  width: 100%;
+  display: flex;align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: var(--row-gap-25);
+}
+footer .container p{
+  padding: 8PX 10PX;
+  width: 100%;text-align: center;
+  border-top: 1PX SOLID #232323;
+  padding-top: 20PX;
+}
+footer .container ul{
+  display: flex;align-items: center;
+  gap: var(--row-gap-15);
+
 }
 
-@media screen and (max-width:767PX) {
-  .hero__section{
-    height: 250PX;
-  }
-  .hero__section .section__image img{
-    width: 100%;height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
+footer .container ul li a{
+  padding: 5PX; transition: .2S linear;
+}
+footer .container ul li a:hover{
+  opacity: .8;
+}
+
+@media screen and (max-width:826px) {
+footer .container ul{
+  flex-direction: column;
+}
 }
