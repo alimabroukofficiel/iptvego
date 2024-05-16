@@ -647,22 +647,7 @@ footer{
   position: relative;
   overflow: hidden;
 }
-footer::before{
-  content: '';position: absolute;
-  width: 200PX;height: 200PX;
-  background-color: #3B3B3B;
-  border-radius: 50%;
-  filter: blur(100PX);
-  left: 0%;
-}
-footer::after{
-  content: '';position: absolute;
-  width: 200PX;height: 200PX;
-  background-color: #3B3B3B;
-  border-radius: 50%;
-  filter: blur(100PX);
-  right: 0%;
-}
+
 @media screen and (max-width:996PX) {
   footer{
     padding: 1REM 2%;
